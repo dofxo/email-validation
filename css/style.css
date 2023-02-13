@@ -114,7 +114,6 @@ body {
 #buttons>button {
 
     cursor: pointer;
-    background: #b3ec8db8;
     box-shadow: 3px 4px 15px #00000040;
     border-radius: 50px;
     font-size: 24px;
@@ -125,7 +124,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    transition: 0.1s;
+    transition: 0.3s;
 }
 
 #buttons>button:last-of-type {
@@ -140,9 +139,13 @@ body {
 
 /* verified  */
 #inputs>div.verified {
-    background: #b3ec8d30;
+    background: #94ff4c5e;
 }
 
 #inputs>div.notVerified {
-    background: #ec8d8d5d;
+    background: #ee707085;
+}
+
+#send.verified {
+    background: #67fa0571;
 }
