@@ -64,7 +64,7 @@ function valueValidation(input) {
 function emailValidation() {
     let parentDiv = emailInput.parentElement
     let emailInputValue = emailInput.value
-    let validEmail = /^([a-z0-9_.\-\+]+)@(gmail|mail|yahoo|Outlook).(com|ir)$/i
+    let validEmail = /^([a-z0-9_.\-\+!]+)@(gmail|mail|yahoo|Outlook).(com|ir)$/i
 
     if (validEmail.test(emailInputValue)) {
         parentDiv.classList.add('verified')
