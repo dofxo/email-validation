@@ -111,6 +111,10 @@ body {
     justify-content: space-evenly;
 }
 
+#buttons img {
+    width: 20px;
+}
+
 #buttons>button {
 
     cursor: pointer;
@@ -125,6 +129,7 @@ body {
     align-items: center;
     justify-content: space-evenly;
     transition: 0.3s;
+
 }
 
 #buttons>button:last-of-type {
@@ -147,5 +152,5 @@ body {
 }
 
 #send.verified {
-    background: #67fa0571;
+    background: #68f90771;
 }

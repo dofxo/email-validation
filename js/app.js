@@ -6,6 +6,7 @@ const inputDivs = document.querySelectorAll('#inputs>div')
 const emailInput = document.querySelector('#email')
 const resetBtn = document.querySelector('#reset')
 const sendBtn = document.querySelector('#send')
+const cover = document.querySelector('#cover')
 // message and subject
 const textValues = document.querySelectorAll('.textValue')
 
@@ -108,6 +109,19 @@ function sendBtnStatus() {
         sendBtn.setAttribute('disabled', "")
     }
 
+
 }
 
 
+
+sendBtn.addEventListener('click', () => {
+    let sendButtonImage = document.querySelector('#send>img')
+    let sendButtonText = document.querySelector('#send>span')
+
+    sendButtonText.textContent = "SENT"
+    sendButtonImage.setAttribute('src', 'images/check.png')
+    sendBtn.style.background = '#337a04b9'
+    sendBtn.style.color = '#000'
+
+
+})
