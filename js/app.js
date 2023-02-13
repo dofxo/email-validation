@@ -10,6 +10,9 @@ const cover = document.querySelector('#cover')
 // message and subject
 const textValues = document.querySelectorAll('.textValue')
 
+// TITLE : send button event listener 
+sendBtn.addEventListener('click', () => { sendAnimation('SENT', 'check', '#337a04b9', '#000') })
+
 // TITLE : prevents the action on form submit
 form.addEventListener('submit', (e) => { e.preventDefault() })
 
@@ -85,6 +88,7 @@ function resetButton() {
     inputDivs.forEach(div => {
         div.classList = ''
         sendBtn.classList = ''
+        sendAnimation('SEND', 'send', '', '')
     })
 }
 
@@ -114,14 +118,17 @@ function sendBtnStatus() {
 
 
 
-sendBtn.addEventListener('click', () => {
+
+// TITLE : send animation
+// whenever the user clicks on send animation the interface of the send button will change
+
+function sendAnimation(innerText, imageName, bg, fontColor) {
     let sendButtonImage = document.querySelector('#send>img')
     let sendButtonText = document.querySelector('#send>span')
 
-    sendButtonText.textContent = "SENT"
-    sendButtonImage.setAttribute('src', 'images/check.png')
-    sendBtn.style.background = '#337a04b9'
-    sendBtn.style.color = '#000'
-
-
-})
+    sendButtonText.textContent = `${innerText}`
+    sendButtonImage.setAttribute('src', `images/${imageName}.png`)
+    sendBtn.style.background = `${bg}`
+    sendBtn.style.color = `${fontColor}`
+}
+// #337a04b9
