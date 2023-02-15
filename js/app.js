@@ -21,17 +21,12 @@ resetBtn.addEventListener('click', resetButton)
 
 // TITLE : event listeners for email 
 emailInput.addEventListener('keyup', emailValidation)
-emailInput.addEventListener('focus', emailValidation)
 emailInput.addEventListener('keyup', sendBtnStatus)
 
 // TITLE : event listeners for subject and message 
 textValues.forEach(input => {
     // keyup event
     input.addEventListener('keyup', () => {
-        valueValidation(input)
-    })
-    // focus event
-    input.addEventListener('focus', () => {
         valueValidation(input)
     })
     input.addEventListener('keyup', () => {
